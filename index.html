@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Día del Flamenco: el día que Federico nos visitó</title>
+<meta name="description" content="Carta de Federico a las familias: así celebramos el Día del Flamenco bailando, tocando y jaleando «Anda, jaleo».">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.className+=' js'</script>
+<style>
+/* ===== Colores y tipos del centro (editables aquí) ===== */
+:root{--navy:#1d1a3c;--navy2:#2b2757;--navy3:#3a3670;--blue:#93c0e3;--blue-d:#5d9acb;--sky:#e8f2fa;--ink:#262445;--mut:#5a5880;--red:#d93a47;--red2:#ee5b66;--gold:#f2b84b;--g:clamp(1rem,4vw,2.5rem);--r:1.25rem;--ease:cubic-bezier(.2,.7,.2,1);--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Open Sans',system-ui,Arial,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font:400 clamp(1rem,.95rem + .25vw,1.125rem)/1.75 var(--sans);color:var(--ink);background:#fff;overflow-x:clip;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,figure,ul,ol{margin:0;padding:0}ul,ol{list-style:none}
+img{display:block;max-width:100%}
+.wrap{width:100%;max-width:1040px;margin:0 auto;padding-inline:var(--g)}
+:focus-visible{outline:3px solid var(--blue-d);outline-offset:3px;border-radius:6px}
+.ico{display:block;width:100%;height:100%}
+
+/* ===== Lunares (motivo del cartel) ===== */
+.lunares{background-image:radial-gradient(circle,rgba(255,255,255,.1) 0 7px,transparent 8px),radial-gradient(circle,rgba(217,58,71,.22) 0 7px,transparent 8px);background-size:64px 64px;background-position:0 0,32px 32px}
+.tira{height:22px;background:var(--navy) radial-gradient(circle,#fff 0 4px,transparent 5px) 0 50%/26px 22px repeat-x}
+.tira.r{background-image:radial-gradient(circle,var(--red) 0 4px,transparent 5px)}
+
+/* ===== Cabecera ===== */
+.hero{position:relative;overflow:hidden;color:#fff;background-color:var(--navy);background-image:radial-gradient(120% 90% at 85% 0%,var(--navy3) 0%,transparent 60%),radial-gradient(circle,rgba(255,255,255,.09) 0 7px,transparent 8px),radial-gradient(circle,rgba(217,58,71,.25) 0 7px,transparent 8px);background-size:auto,64px 64px,64px 64px;background-position:0 0,0 0,32px 32px;padding:clamp(2.5rem,7vw,5.5rem) 0 clamp(5rem,12vw,9rem)}
+.hero .wrap{position:relative;z-index:2}
+.kick{display:inline-flex;flex-wrap:wrap;gap:.4rem .9rem;align-items:center;font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.kick i{display:inline-block;width:2.2rem;height:3px;border-radius:3px;background:var(--red)}
+h1{margin-top:1rem;font:600 clamp(2.3rem,7.2vw,5rem)/1.04 var(--serif);letter-spacing:-.02em;text-wrap:balance;max-width:15ch}
+h1 em{font-style:italic;font-weight:500;color:var(--red2)}
+.lede{margin-top:1.4rem;max-width:54ch;font-size:clamp(1.05rem,1rem + .5vw,1.3rem);line-height:1.6;color:#dbe9f5;text-wrap:pretty}
+.deco{position:absolute;z-index:1;pointer-events:none}
+.d1{right:7%;top:9%;width:clamp(86px,16vw,200px);aspect-ratio:1;transform-origin:50% 90%;animation:fan 6s ease-in-out infinite}
+.d2{right:26%;bottom:26%;width:clamp(56px,9vw,110px);aspect-ratio:1;transform-origin:50% 0;animation:swing 4.5s ease-in-out infinite}
+.d3{right:3%;bottom:32%;width:clamp(60px,10vw,120px);aspect-ratio:1;animation:tap 2.4s ease-in-out infinite}
+.d4{right:40%;top:6%;width:clamp(30px,5vw,56px);aspect-ratio:1;transform-origin:50% 0;animation:swing 3.6s ease-in-out infinite reverse}
+.d5{right:17%;top:40%;width:clamp(40px,6vw,72px);aspect-ratio:1;animation:tap 3s ease-in-out infinite .6s}
+@keyframes fan{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
+@keyframes swing{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(12deg)}}
+@keyframes tap{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-8px) rotate(3deg)}}
+
+/* ===== Foto principal ===== */
+.lead{margin-top:calc(-1 * clamp(3rem,8vw,6rem));position:relative;z-index:3}
+.ph{position:relative;margin:0;border-radius:var(--r);overflow:hidden;background:var(--sky);box-shadow:0 24px 60px -24px rgba(29,26,60,.55)}
+.ph button{all:unset;display:block;width:100%;height:100%;cursor:zoom-in}
+.ph button:focus-visible{outline:3px solid var(--blue);outline-offset:-6px}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.ph:hover img{transform:scale(1.03)}
+.ph figcaption{position:absolute;inset:auto 0 0 0;padding:2.4rem 1.1rem .9rem;font-size:.88rem;line-height:1.4;color:#fff;background:linear-gradient(transparent,rgba(29,26,60,.88));pointer-events:none}
+.lead .ph{aspect-ratio:16/9}
+.lead .ph img{object-position:50% 30%}
+
+/* ===== Bloques ===== */
+section{padding-block:clamp(3rem,8vw,6rem)}
+h2{font:600 clamp(1.7rem,4.2vw,2.9rem)/1.12 var(--serif);letter-spacing:-.015em;color:var(--navy);text-wrap:balance}
+h2::after{content:"";display:block;width:64px;height:5px;border-radius:5px;margin-top:.9rem;background:var(--blue)}
+.prose p+p{margin-top:1.1rem}
+.prose p{max-width:62ch;text-wrap:pretty}
+.prose strong{color:var(--navy)}
+.aside{color:var(--mut);font-style:italic}
+
+/* ===== Carta de Federico ===== */
+.carta{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(1.6rem,5vw,4rem);align-items:center}
+.retrato{position:relative;margin:0;transform:rotate(-2.5deg);padding:.8rem .8rem 3.4rem;background:#fff;border-radius:6px;box-shadow:0 22px 50px -22px rgba(29,26,60,.55);border:1px solid #e3e8f3}
+.retrato img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;filter:grayscale(1) contrast(1.05)}
+.retrato figcaption{position:absolute;left:0;right:0;bottom:.9rem;text-align:center;font:italic 600 1.1rem/1.2 var(--serif);color:var(--navy)}
+.retrato .clip{position:absolute;top:-16px;left:50%;width:78px;height:30px;margin-left:-39px;border-radius:6px;background:rgba(147,192,227,.75);transform:rotate(3deg)}
+.carta h2{margin-bottom:1.4rem}
+.dear{font:italic 600 clamp(1.3rem,2.6vw,1.7rem)/1.3 var(--serif);color:var(--navy);margin-bottom:1rem}
+.firma{margin-top:1.6rem;font:italic 600 clamp(1.8rem,4vw,2.6rem)/1 var(--serif);color:var(--red)}
+
+/* ===== Capítulos ===== */
+.chap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(1.6rem,5vw,4rem);align-items:center}
+.chap.rev .fig{order:2}
+.chap .num{display:inline-grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:var(--navy);color:#fff;font:600 1.3rem/1 var(--serif);margin-bottom:1rem}
+.chap .tit{display:flex;align-items:center;gap:.9rem}
+.chap .tit .ib{flex:none;width:3.4rem;height:3.4rem}
+.chap h2{font-size:clamp(1.5rem,3.4vw,2.3rem)}
+.fig .ph{aspect-ratio:4/5}
+.fig .ph.w{aspect-ratio:4/3}
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(.6rem,2vw,1.1rem)}
+.duo .ph{aspect-ratio:3/4}
+.duo .ph:nth-child(2){margin-top:clamp(1rem,4vw,2.4rem)}
+
+/* ===== Elementos del tablao ===== */
+.tablao{background:var(--sky);padding-block:clamp(2.5rem,6vw,4.5rem)}
+.tablao h2{text-align:center}.tablao h2::after{margin-inline:auto}
+.tablao .sub{margin:1.2rem auto 0;max-width:52ch;text-align:center;color:var(--mut)}
+.els{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(.6rem,1.6vw,1.1rem);margin-top:clamp(1.6rem,4vw,2.6rem)}
+.els li{display:grid;justify-items:center;gap:.7rem;padding:1.1rem .5rem 1rem;border-radius:var(--r);background:#fff;border:2px solid transparent;text-align:center;font-weight:700;font-size:.92rem;color:var(--navy);transition:transform .35s var(--ease),border-color .35s,box-shadow .35s}
+.els li:hover{transform:translateY(-5px) rotate(-1.5deg);border-color:var(--blue);box-shadow:0 18px 36px -22px rgba(29,26,60,.5)}
+.els .ib{width:clamp(48px,8vw,72px);height:clamp(48px,8vw,72px)}
+
+/* ===== Significado ===== */
+.sig{position:relative;overflow:hidden;background-color:var(--navy);color:#fff}
+.sig .wrap{position:relative}
+.sig h2{color:#fff}.sig h2::after{background:var(--red)}
+.sig .grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(1.8rem,5vw,4rem);align-items:start;margin-top:1.6rem}
+.sig .prose p{color:#dbe9f5}.sig .prose strong{color:#fff}
+.frase{padding:clamp(1.4rem,3.4vw,2.2rem);border-radius:var(--r);background:rgba(255,255,255,.08);border:1px solid rgba(147,192,227,.35)}
+.frase small{display:block;font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.75rem;color:var(--blue)}
+.frase p{margin-top:.8rem;font:italic 500 clamp(1.4rem,3.2vw,2.1rem)/1.25 var(--serif);text-wrap:balance}
+.frase p b{color:var(--red2);font-weight:600}
+.dos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem;margin-top:1.3rem}
+.dos div{padding:1rem 1.1rem;border-radius:1rem;background:rgba(255,255,255,.07);font-size:.95rem;line-height:1.5;color:#dbe9f5}
+.dos b{display:block;color:#fff;font:600 1.15rem/1.2 var(--serif);margin-bottom:.25rem}
+
+/* ===== Cards ===== */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(.8rem,2vw,1.3rem);margin-top:clamp(1.8rem,4vw,3rem)}
+.cards li{display:grid;grid-template-columns:3.6rem minmax(0,1fr);gap:1.1rem;align-items:start;padding:clamp(1.1rem,3vw,1.6rem);border-radius:var(--r);background:#fff;border:2px solid var(--sky);transition:transform .35s var(--ease),border-color .35s,box-shadow .35s}
+.cards li:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:0 18px 40px -22px rgba(29,26,60,.45)}
+.cards .ib{width:3.6rem;height:3.6rem;border-radius:14px;background:var(--navy);padding:.5rem}
+.cards h3{font:600 1.3rem/1.2 var(--serif);color:var(--navy)}
+.cards p{margin-top:.4rem;color:var(--mut);font-size:.96em;line-height:1.65}
+
+/* ===== Glosario del jaleo ===== */
+.jal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(.7rem,2vw,1.2rem);margin-top:clamp(1.6rem,4vw,2.6rem)}
+.jal li{position:relative;overflow:hidden;padding:1.4rem 1.2rem 1.3rem;border-radius:var(--r);background:var(--navy);color:#fff;transition:transform .35s var(--ease)}
+.jal li:hover{transform:translateY(-5px) rotate(-1deg)}
+.jal li::after{content:"";position:absolute;right:-22px;top:-22px;width:78px;height:78px;border-radius:50%;background:var(--red);opacity:.9}
+.jal b{position:relative;display:block;font:600 clamp(1.6rem,3.2vw,2.2rem)/1.1 var(--serif);font-style:italic}
+.jal span{position:relative;display:block;margin-top:.5rem;color:#dbe9f5;font-size:.93rem;line-height:1.5}
+
+/* ===== Galería ===== */
+.gal{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:clamp(240px,36vw,400px);gap:clamp(.7rem,2vw,1.2rem);margin-top:clamp(1.6rem,4vw,2.6rem)}
+.gal .ph{height:100%}
+.gal .a{grid-column:span 7}.gal .b{grid-column:span 5}
+.gal .c{grid-column:span 5}.gal .d{grid-column:span 7}
+.gal .b img{object-position:50% 40%}.gal .c img{object-position:50% 30%}
+
+/* ===== Cierre ===== */
+.thanks{position:relative;overflow:hidden;color:#fff;background-color:var(--navy);padding-block:clamp(3rem,8vw,5.5rem)}
+.thanks .wrap{position:relative}
+.thanks h2{color:#fff}.thanks h2::after{background:var(--red)}
+.thanks p{margin-top:1.4rem;max-width:58ch;font-size:clamp(1.05rem,1rem + .4vw,1.25rem);line-height:1.65;color:#dbe9f5;text-wrap:pretty}
+.tags{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.8rem}
+.tags span{padding:.45rem 1rem;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(147,192,227,.4);font-weight:700;font-size:.9rem}
+.thanks .firma{color:var(--red2)}
+.sign{margin-top:1.6rem;font-weight:700;color:var(--blue);letter-spacing:.03em}
+
+/* ===== Visor de fotos ===== */
+.lb{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:1rem;background:rgba(15,13,36,.92)}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:86vh;border-radius:12px}
+.lb p{position:absolute;left:0;right:0;bottom:.8rem;text-align:center;color:#dbe9f5;font-size:.9rem;padding-inline:1rem;margin:0}
+.lb button{position:absolute;top:.8rem;right:.8rem;width:2.8rem;height:2.8rem;border:0;border-radius:50%;background:#fff;color:var(--navy);font-size:1.5rem;font-weight:700;cursor:pointer}
+
+/* ===== Aparición ===== */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--dl,0s)}
+.js .rv.in{opacity:1;transform:none}
+
+/* ===== Adaptación ===== */
+@media(max-width:980px){
+  .carta,.chap,.sig .grid{grid-template-columns:minmax(0,1fr)}
+  .chap.rev .fig{order:0}
+  .retrato{max-width:340px;margin-inline:auto}
+  .els{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .jal{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fig .ph{aspect-ratio:4/3}
+  .fig .ph.tall{aspect-ratio:4/5;max-width:520px;margin-inline:auto}
+}
+@media(max-width:700px){
+  .cards{grid-template-columns:minmax(0,1fr)}
+  .lead .ph{aspect-ratio:4/3}
+  .gal{grid-auto-rows:auto}
+  .gal .ph{height:auto;aspect-ratio:4/3}
+  .gal .a,.gal .b,.gal .c,.gal .d{grid-column:span 12}
+  h1{max-width:none}
+  .d2,.d3,.d4,.d5{display:none}
+  .d1{top:3%;right:-12px;width:96px;opacity:.3}
+}
+@media(max-width:480px){.dos{grid-template-columns:minmax(0,1fr)}.els{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.aus{margin:clamp(1.8rem,4vw,3rem) 0 0;border-radius:var(--r);overflow:hidden;border:1px solid rgba(147,192,227,.35);box-shadow:0 26px 60px -30px rgba(0,0,0,.7)}
+.aus svg{display:block;width:100%;height:auto}
+.aus figcaption{padding:.85rem 1.1rem;text-align:center;font:italic 600 1.05rem/1.35 var(--serif);color:#fff;background:rgba(0,0,0,.28)}
+.sw{animation:sw 3.2s ease-in-out infinite}.sw2{animation:sw 3.2s ease-in-out infinite reverse}
+.bl{animation:brilla 3s ease-in-out infinite;animation-delay:var(--t)}
+.nt{opacity:0;animation:sube 5s ease-in infinite;animation-delay:var(--t)}
+.pet{animation:cae 6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes sw{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.6deg)}}
+@keyframes brilla{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes sube{0%{opacity:0;transform:translate(0,0)}15%{opacity:.9}100%{opacity:0;transform:translate(var(--x),-44px)}}
+@keyframes cae{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(8deg)}}
+.infa{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(.7rem,2vw,1.2rem);margin-top:clamp(1.6rem,4vw,2.6rem)}
+.infa .ph{height:clamp(260px,38vw,440px)}
+.infa .a{grid-column:span 7}.infa .b{grid-column:span 5}.infa .c{grid-column:span 5}
+.infa .b img{object-position:50% 35%}
+.voc{grid-column:span 7;display:flex;flex-direction:column;justify-content:center;gap:1rem;padding:clamp(1.2rem,3vw,2rem);border-radius:var(--r);background:var(--sky);border:2px solid #fff}
+.voc h3{font:600 1.35rem/1.2 var(--serif);color:var(--navy)}
+.vocab{display:flex;flex-wrap:wrap;gap:.5rem}
+.vocab li{padding:.35rem .85rem;border-radius:.8rem;background:#fff;border:3px dotted var(--red);font-weight:700;font-size:.92rem;color:var(--navy)}
+.bola{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(1.4rem,4vw,3rem);align-items:center;padding:clamp(1.4rem,4vw,2.6rem);border-radius:var(--r);background:var(--navy);color:#fff}
+.bola h2{color:#fff}.bola h2::after{background:var(--red)}
+.bola p{margin-top:1rem;color:#dbe9f5}.bola p strong{color:#fff}
+.bola svg{display:block;width:100%;height:auto;max-width:460px;margin-inline:auto}
+@media(max-width:700px){.infa{grid-template-columns:minmax(0,1fr)}.infa .ph{height:auto;aspect-ratio:4/3}.infa .a,.infa .b,.infa .c,.voc{grid-column:auto}.infa .b{aspect-ratio:4/5}}
+@media(max-width:820px){.bola{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- Dibujos propios, decorativos -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- castañuelas -->
+    <symbol id="castanuelas" viewBox="0 0 64 64">
+      <path d="M14 22C14 12 26 8 32 14C38 8 50 12 50 22" fill="none" stroke="#d93a47" stroke-width="3" stroke-linecap="round"/>
+      <path d="M30 14l-5-5 7 1 7-1-5 5z" fill="#d93a47"/>
+      <g><path d="M5 40C4 28 12 22 20 24C27 26 31 34 29 44C25 53 9 54 5 40z" fill="#b36b45"/><path d="M9 40C9 32 14 28 19 29C24 30 26 36 25 42C22 48 11 48 9 40z" fill="#d38b5f"/><circle cx="18" cy="31" r="2.4" fill="#5a2c1c"/><path d="M8 36q3-5 9-6" stroke="#f2d9b0" stroke-opacity=".7" stroke-width="1.8" fill="none" stroke-linecap="round"/></g>
+      <g><path d="M59 40C60 28 52 22 44 24C37 26 33 34 35 44C39 53 55 54 59 40z" fill="#9c5a39"/><path d="M55 40C55 32 50 28 45 29C40 30 38 36 39 42C42 48 53 48 55 40z" fill="#c07a50"/><circle cx="46" cy="31" r="2.4" fill="#5a2c1c"/><path d="M56 36q-3-5-9-6" stroke="#f2d9b0" stroke-opacity=".6" stroke-width="1.8" fill="none" stroke-linecap="round"/></g>
+    </symbol>
+    <!-- abanico -->
+    <symbol id="abanico" viewBox="0 0 64 64">
+      <path d="M32 58L5 26A42 42 0 0 1 59 26Z" fill="#231f45" stroke="#93c0e3" stroke-width="1.6" stroke-linejoin="round"/>
+      <g stroke="#93c0e3" stroke-width="1.2" opacity=".8"><path d="M32 58L12 20"/><path d="M32 58L21 14"/><path d="M32 58L32 12"/><path d="M32 58L43 14"/><path d="M32 58L52 20"/></g>
+      <g fill="#fff"><circle cx="20" cy="30" r="2"/><circle cx="32" cy="24" r="2"/><circle cx="44" cy="30" r="2"/><circle cx="26" cy="40" r="2"/><circle cx="38" cy="40" r="2"/><circle cx="32" cy="48" r="2"/></g>
+      <circle cx="32" cy="58" r="3.4" fill="#d93a47"/>
+    </symbol>
+    <!-- tacones (zapato de baile) -->
+    <symbol id="tacon" viewBox="0 0 64 64">
+      <path d="M10 24H25C26 31 31 35 38 38C48 42 60 44 60 51C60 55 57 58 52 58H40C32 58 27 52 22 47H10Z" fill="#d93a47" stroke="#1d1a3c" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M10 47H22L21 60H9Z" fill="#7a463d" stroke="#1d1a3c" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M27 32C32 33 37 36 41 40" fill="none" stroke="#1d1a3c" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M26 40C30 41 34 43 38 46" fill="none" stroke="#1d1a3c" stroke-width="2.4" stroke-linecap="round"/>
+      <circle cx="44" cy="43" r="3" fill="#f2b84b" stroke="#1d1a3c" stroke-width="1.4"/>
+      <g fill="#fff"><circle cx="16" cy="30" r="1.6"/><circle cx="16" cy="40" r="1.6"/><circle cx="50" cy="50" r="1.6"/><circle cx="40" cy="52" r="1.6"/><circle cx="30" cy="44" r="1.6"/></g>
+      <g fill="#f2b84b"><circle cx="12" cy="56" r="1.3"/><circle cx="15.5" cy="56" r="1.3"/><circle cx="19" cy="56" r="1.3"/></g>
+      <path d="M2 42l4 2M1 50h5M3 58l4-2" stroke="#93c0e3" stroke-width="2" stroke-linecap="round" fill="none"/>
+    </symbol>
+    <!-- zarcillos -->
+    <symbol id="zarcillo" viewBox="0 0 64 64">
+      <path d="M32 3c3 0 5 2 5 5s-2 4-5 4" fill="none" stroke="#f2b84b" stroke-width="2.4" stroke-linecap="round"/>
+      <circle cx="32" cy="34" r="21" fill="none" stroke="#f2b84b" stroke-width="4"/>
+      <circle cx="32" cy="34" r="21" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1.2" stroke-dasharray="3 6"/>
+      <g fill="#f2b84b"><circle cx="22" cy="50" r="3.4"/><circle cx="32" cy="55" r="3.4"/><circle cx="42" cy="50" r="3.4"/></g>
+    </symbol>
+    <!-- silla con lunares -->
+    <symbol id="silla" viewBox="0 0 64 64">
+      <g fill="#7a463d" stroke="#1d1a3c" stroke-width="1.6" stroke-linejoin="round"><rect x="10" y="4" width="6" height="56" rx="2.4"/><rect x="48" y="4" width="6" height="56" rx="2.4"/></g>
+      <rect x="16" y="8" width="32" height="22" rx="4" fill="#d93a47" stroke="#1d1a3c" stroke-width="1.6"/>
+      <rect x="6" y="34" width="52" height="10" rx="4" fill="#d93a47" stroke="#1d1a3c" stroke-width="1.6"/>
+      <rect x="14" y="48" width="36" height="4" rx="2" fill="#7a463d" stroke="#1d1a3c" stroke-width="1.2"/>
+      <g fill="#fff"><circle cx="23" cy="15" r="2.3"/><circle cx="32" cy="22" r="2.3"/><circle cx="41" cy="15" r="2.3"/><circle cx="14" cy="39" r="2"/><circle cx="23" cy="39" r="2"/><circle cx="32" cy="39" r="2"/><circle cx="41" cy="39" r="2"/><circle cx="50" cy="39" r="2"/></g>
+    </symbol>
+    <!-- cajón -->
+    <symbol id="cajon" viewBox="0 0 64 64">
+      <rect x="9" y="8" width="46" height="48" rx="5" fill="#7a463d"/>
+      <rect x="13" y="12" width="38" height="40" rx="3" fill="none" stroke="#f2d9b0" stroke-width="1.6"/>
+      <ellipse cx="32" cy="32" rx="11" ry="12" fill="#f3e9dc"/>
+      <path d="M26 36c1-6 3-9 6-9s5 3 6 9" fill="none" stroke="#7a463d" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="29" cy="30" r="1.3" fill="#7a463d"/><circle cx="35" cy="30" r="1.3" fill="#7a463d"/>
+      <g fill="none" stroke="#f2b84b" stroke-width="1.6" stroke-linecap="round"><path d="M16 16q4 2 8 0"/><path d="M40 16q4 2 8 0"/><path d="M16 48q4-2 8 0"/><path d="M40 48q4-2 8 0"/></g>
+    </symbol>
+    <!-- megáfono -->
+    <symbol id="megafono" viewBox="0 0 64 64">
+      <path d="M10 26H20L44 12V52L20 38H10Z" fill="#d93a47" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+      <ellipse cx="44" cy="32" rx="5" ry="20" fill="#ee5b66" stroke="#fff" stroke-width="2"/>
+      <path d="M20 26V38" stroke="#fff" stroke-width="2"/>
+      <path d="M14 38L17 54H25L22 40" fill="#f2b84b" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+      <g fill="none" stroke="#f2b84b" stroke-width="3" stroke-linecap="round"><path d="M54 24q4 8 0 16"/><path d="M59 18q7 14 0 28"/></g>
+    </symbol>
+    <!-- palmas -->
+    <symbol id="palmas" viewBox="0 0 64 64">
+      <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 44l-8-14 6-3 6 8 4-18 5 1-1 17 8-9 4 4-12 18z" fill="#93c0e3" fill-opacity=".25"/></g>
+      <g stroke="#d93a47" stroke-width="3" stroke-linecap="round"><path d="M44 12l4-6"/><path d="M52 18l6-3"/><path d="M12 14l-4-6"/></g>
+    </symbol>
+    <!-- rosa del pelo -->
+    <symbol id="rosa" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="26" fill="#c42d3b"/><circle cx="32" cy="32" r="20" fill="#d93a47"/>
+      <path d="M32 32m0-12a12 12 0 1 1-12 12a8 8 0 1 1 8-8a5 5 0 1 1-5 5" fill="none" stroke="#ee5b66" stroke-width="3.4" stroke-linecap="round"/>
+      <path d="M22 18q6-6 14-4" stroke="#fff" stroke-opacity=".35" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <!-- guitarra -->
+    <symbol id="guitarra" viewBox="0 0 64 64">
+      <path d="M44 8l12 12-4 3-4-3-14 14" fill="none" stroke="#f3e9dc" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M30 26c-6-2-12 2-12 8-5 1-10 5-9 12s9 10 15 8c6-2 10-6 10-12 5-1 8-5 6-9-2-5-6-3-10-7z" fill="#7a463d" stroke="#f2d9b0" stroke-width="1.6" stroke-linejoin="round"/>
+      <circle cx="26" cy="42" r="4.4" fill="#1b1830"/>
+    </symbol>
+    <!-- libro -->
+    <symbol id="libro" viewBox="0 0 64 64">
+      <path d="M32 14c-7-4-17-5-24-3v38c7-2 17-1 24 3 7-4 17-5 24-3V11c-7-2-17-1-24 3zM32 14v38" fill="#fff" fill-opacity=".12" stroke="#fff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M14 22c5-1 10 0 14 2M14 30c5-1 10 0 14 2M36 24c4-2 9-3 14-2M36 32c4-2 9-3 14-2" stroke="#93c0e3" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    </symbol>
+    <!-- flauta -->
+    <symbol id="flauta" viewBox="0 0 64 64">
+      <rect x="6" y="26" width="52" height="12" rx="6" transform="rotate(-20 32 32)" fill="#fff"/>
+      <g transform="rotate(-20 32 32)" fill="#d93a47"><circle cx="22" cy="32" r="2.6"/><circle cx="30" cy="32" r="2.6"/><circle cx="38" cy="32" r="2.6"/><circle cx="46" cy="32" r="2.6"/></g>
+      <path d="M52 10c3 2 5 5 5 9M46 6c5 2 8 6 9 12" stroke="#93c0e3" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ===== CABECERA ===== -->
+<header class="hero">
+  <svg class="deco d1" aria-hidden="true"><use href="#abanico"/></svg>
+  <svg class="deco d2" aria-hidden="true"><use href="#castanuelas"/></svg>
+  <svg class="deco d3" aria-hidden="true"><use href="#tacon"/></svg>
+  <svg class="deco d4" aria-hidden="true"><use href="#zarcillo"/></svg>
+  <svg class="deco d5" aria-hidden="true"><use href="#rosa"/></svg>
+  <div class="wrap">
+    <p class="kick"><i></i>Día del Flamenco · 16 de noviembre de 2026</p>
+    <h1>Anda, <em>jaleo</em>: el día que Federico nos visitó</h1>
+    <p class="lede">Una carta a las familias, escrita por el poeta que se paseó por nuestro patio con sombrero y pajarita y vio bailar a los chiquillos una coreografía preciosa.</p>
+    <audio id="musica" src="audio/anda-jaleo.mp3" loop preload="auto" playsinline></audio>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== FOTO PRINCIPAL ===== -->
+  <div class="wrap lead">
+    <figure class="ph rv">
+      <button type="button" data-lb aria-label="Ampliar foto: alumnado bailando delante del cartel «Anda, jaleo, jaleo»">
+        <img src="img/jaleo.jpg" width="1600" height="1200" alt="Alumnos con atuendo flamenco, mantones y flores en el pelo, alzando los brazos a compás delante de un cartel que dice «Anda, jaleo, jaleo»." loading="eager" decoding="async">
+      </button>
+      <figcaption>¡Ahí va el jaleo! Alzando los brazos delante del cartel.</figcaption>
+    </figure>
+  </div>
+
+  <!-- ===== CARTA ===== -->
+  <section>
+    <div class="wrap carta">
+      <figure class="retrato rv">
+        <span class="clip" aria-hidden="true"></span>
+        <img src="img/federico.jpg" width="550" height="785" alt="Retrato antiguo en blanco y negro de Federico García Lorca, de joven, apoyando la cara en la mano." loading="lazy" decoding="async">
+        <figcaption>Federico García Lorca</figcaption>
+      </figure>
+      <div class="prose rv" style="--dl:.1s">
+        <h2>Queridas familias</h2>
+        <p class="dear">Hay visitas que se hacen con maleta y visitas que se hacen con sombrero. La mía fue de las segundas, ¡ay, qué gusto!</p>
+        <p>Una mañanita de noviembre me colé en el cole con mi mejor traje, mi pajarita y un librito bajo el brazo. Los chiquillos me miraron como si me hubiera escapado de una fotografía antigua. <span class="aside">(Dicen algunos mayores que debajo del traje se escondía alguien muy parecido a vuestro director. Yo ni sí ni no: un poeta nunca cuenta sus secretos.)</span></p>
+        <p>Venía, familias, a contaros una cosa muy mía: que con cuatro palabras sencillas se hace una canción, y con una canción, una fiesta. Venía a escuchar <strong>«Anda, jaleo»</strong> y a ver con mis propios ojos qué hacían los niños con ella en este <strong>Día del Flamenco</strong>.</p>
+        <p class="firma">Federico</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CAPÍTULO 1 ===== -->
+  <section style="padding-top:0">
+    <div class="wrap chap">
+      <div class="fig rv">
+        <figure class="ph tall">
+          <button type="button" data-lb aria-label="Ampliar foto: el rincón del flamenco con el cartel y los lunares">
+            <img src="img/cartel.jpg" width="1200" height="1600" alt="Cinco personas sentadas junto a una mesa con mantón y un cajón, delante de dos arcos naranjas con lunares blancos y un cartel de papel de estraza con el título «Anda, jaleo, jaleo»." loading="lazy" decoding="async">
+          </button>
+          <figcaption>El rincón del flamenco: arcos naranjas, lunares blancos y un cajón con retrato de Camarón.</figcaption>
+        </figure>
+      </div>
+      <div class="prose rv" style="--dl:.1s">
+        <div class="tit"><svg class="ib" aria-hidden="true" style="background:var(--navy);border-radius:50%;padding:.55rem"><use href="#silla"/></svg><h2>Un rinconcito hecho de lunares</h2></div>
+        <p style="margin-top:1.2rem">Lo primero que vi fue un rinconcito del patio vestido de fiesta. Dos arcos naranjas con lunares blancos, como dos abanicos gigantes. Un cartel de papel de estraza que decía <strong>«Anda, jaleo, jaleo»</strong> y, justo debajo, ¡un retrato mío! Ay, qué susto, verme tan joven.</p>
+        <p>Sobre la mesa, un mantón de Manila con flecos largos como cascadas; unos zapatitos de taconeo esperando su turno; un abanico negro; flores de papel por las paredes y una guitarra de cartón. Hasta las sillas llevaban lunares, y en un cajón alguien había dibujado, con mucho cariño, un retrato a lápiz de <strong>Camarón de la Isla</strong>, ese cantaor de voz rota que tanto ha dado al flamenco. ¡Qué buena compañía para una fiesta de jaleo!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ELEMENTOS ===== -->
+  <div class="tablao lunares">
+    <div class="wrap">
+      <h2 class="rv">Todo lo que hace falta para una fiesta flamenca</h2>
+      <p class="sub rv">Mirad los detalles. Yo me quedé un buen ratito mirándolos.</p>
+      <ul class="els">
+        <li class="rv"><svg class="ib" aria-hidden="true"><use href="#castanuelas"/></svg>Castañuelas</li>
+        <li class="rv" style="--dl:.05s"><svg class="ib" aria-hidden="true"><use href="#abanico"/></svg>Abanicos</li>
+        <li class="rv" style="--dl:.1s"><svg class="ib" aria-hidden="true"><use href="#tacon"/></svg>Tacones</li>
+        <li class="rv" style="--dl:.15s"><svg class="ib" aria-hidden="true"><use href="#zarcillo"/></svg>Zarcillos</li>
+        <li class="rv" style="--dl:.2s"><svg class="ib" aria-hidden="true"><use href="#silla"/></svg>Sillas con lunares</li>
+        <li class="rv" style="--dl:.25s"><svg class="ib" aria-hidden="true"><use href="#cajon"/></svg>Cajón</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== INFANTIL ===== -->
+  <section>
+    <div class="wrap">
+      <h2 class="rv">En Infantil, ¡a armar jaleo!</h2>
+      <p class="rv" style="margin-top:1.2rem;max-width:62ch">Y ahora una cosa que me ha dejado con la boca abierta: los más chiquitines de Infantil se han puesto a trabajar de lo lindo. Han aprendido, una por una, <strong>las cosas que hacen falta para armar un buen jaleo</strong>. Las colocaron sobre un mantón de lunares con muchísimo cuidado, y luego se hicieron sus chapas de <strong>«Yo soy flamenco»</strong>, cada uno con la suya. ¡Madre mía, qué arte tienen estos niños!</p>
+      <div class="infa">
+        <figure class="ph a rv">
+          <button type="button" data-lb aria-label="Ampliar foto: las tarjetas del vocabulario flamenco sobre un mantón de lunares azules">
+            <img src="img/vocab2.jpg" width="1600" height="1205" alt="Tarjetas de vocabulario flamenco con borde de lunares rojos colocadas en abanico bajo un mantón negro con lunares azules y flecos azules." loading="lazy" decoding="async">
+          </button>
+          <figcaption>Guitarra, sombrero, peineta, cajón, abanico… ¡todo lo que hace falta!</figcaption>
+        </figure>
+        <figure class="ph b rv" style="--dl:.1s">
+          <button type="button" data-lb aria-label="Ampliar foto: el vocabulario flamenco de Infantil sobre la mesa">
+            <img src="img/vocab1.jpg" width="1200" height="1600" alt="Mesa con tarjetas de vocabulario flamenco, pañuelos rojos, un mantón verde bordado y un sombrero negro." loading="lazy" decoding="async">
+          </button>
+          <figcaption>El vocabulario flamenco de Infantil, sobre la mesa.</figcaption>
+        </figure>
+        <figure class="ph c rv">
+          <button type="button" data-lb aria-label="Ampliar foto: las chapas «Yo soy flamenco» sobre los mantones">
+            <img src="img/chapas.jpg" width="880" height="770" alt="Manos de niños sujetando chapas redondas con el lema «Yo soy flamenco» sobre mantones de colores." loading="lazy" decoding="async">
+          </button>
+          <figcaption>«Yo soy flamenco»: cada uno con su chapa.</figcaption>
+        </figure>
+        <div class="voc rv" style="--dl:.1s">
+          <h3>Lo que han aprendido</h3>
+          <ul class="vocab">
+            <li>Abanico</li><li>Vestido</li><li>Flamenca</li><li>Pendientes</li><li>Pulseras</li><li>Collar</li><li>Peineta</li><li>Castañuelas</li><li>Guitarra</li><li>Cajón</li><li>Zapatos</li><li>Mantón</li><li>Flor</li><li>Sombrero</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CAPÍTULO 2: LOS PEQUEÑOS ===== -->
+  <section>
+    <div class="wrap chap rev">
+      <div class="fig rv">
+        <figure class="ph w">
+          <button type="button" data-lb aria-label="Ampliar foto: alumnado bailando en el patio">
+            <img src="img/patio.jpg" width="1600" height="1200" alt="Alumnado bailando en pareja en el patio del colegio, con faldas negras y fajines rojos, y el profesorado mirando de fondo." loading="lazy" decoding="async" style="object-position:55% 50%">
+          </button>
+          <figcaption>Bailando en el patio, con todo el mundo mirando.</figcaption>
+        </figure>
+      </div>
+      <div class="prose rv" style="--dl:.1s">
+        <div class="tit"><svg class="ib" aria-hidden="true" style="background:var(--navy);border-radius:50%;padding:.55rem"><use href="#tacon"/></svg><h2>Los de Primaria bailaron mis palabras</h2></div>
+        <p style="margin-top:1.2rem">Y entonces salieron al patio los de Primaria. ¡Ay, qué coreografía! Se notaba a la legua que la habían ensayado una y otra vez, con paciencia y con mucha ilusión: los brazos arriba, los pies marcando el compás, los mantoncillos rojos girando como pájaros de seda.</p>
+        <p>He visto bailar a mucha gente, pero pocas veces con tanta verdad como un niño al que le dices: «Ahora, jalea». Ellas con sus flores en el pelo, ellos con sus fajines rojos, todos a compás, y los seños y los profes mirando con la boca abierta. Entre vosotros y yo: se me escapó una lagrimita.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="duo">
+        <figure class="ph rv">
+          <button type="button" data-lb aria-label="Ampliar foto: mantones rojos junto al cartel">
+            <img src="img/baile2.jpg" width="1600" height="1200" alt="Grupo de niños y niñas con mantones rojos mirando el rincón flamenco, con una mesa de mantón bordado y zapatos de baile." loading="lazy" decoding="async">
+          </button>
+          <figcaption>Mantones rojos, flecos y zapatitos de baile.</figcaption>
+        </figure>
+        <figure class="ph rv" style="--dl:.1s">
+          <button type="button" data-lb aria-label="Ampliar foto: listos junto al cartel">
+            <img src="img/baile1.jpg" width="1537" height="1600" alt="Vista desde atrás de una niña con falda negra y camiseta blanca, y otra con mantón rojo con flecos, mirando al cartel del rincón flamenco." loading="lazy" decoding="async" style="object-position:50% 30%">
+          </button>
+          <figcaption>Listos, con su mantón y sus flecos.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CAPÍTULO 3: LOS MAYORES ===== -->
+  <section style="padding-top:0">
+    <div class="wrap chap">
+      <div class="fig rv">
+        <figure class="ph tall">
+          <button type="button" data-lb aria-label="Ampliar foto: alumnado mayor tocando la flauta">
+            <img src="img/flautas.jpg" width="1200" height="1600" alt="Alumnado de cursos mayores con flautas dulces, atriles y mantones, en el patio, interpretando la canción." loading="lazy" decoding="async">
+          </button>
+          <figcaption>Flautas, atriles y mantones sobre los hombros.</figcaption>
+        </figure>
+      </div>
+      <div class="prose rv" style="--dl:.1s">
+        <div class="tit"><svg class="ib" aria-hidden="true" style="background:var(--navy);border-radius:50%;padding:.55rem"><use href="#flauta"/></svg><h2>Los mayores, con la flauta; las seños, con castañuelas</h2></div>
+        <p style="margin-top:1.2rem">Los mayores tampoco se quedaron atrás: tocaron la <strong>flauta</strong>, con su atril delante y el mantón sobre los hombros, con una seriedad preciosa. Y dos de las seños los acompañaron con <strong>castañuelas</strong>, ¡tris, tras, tris, tras!, que sonaban como pajarillos nerviosos.</p>
+        <p>Yo, con mi libro abierto, hice lo que mejor sé hacer: <strong>leer despacito</strong>, para que cada palabra tuviera tiempo de llegar. Y delante de mí, una silla de lunares y unos flecos de seda negra, quietecitos, esperando a que empezara la música.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="tira r" aria-hidden="true"></div>
+
+  <!-- ===== SIGNIFICADO ===== -->
+  <section class="sig lunares">
+    <div class="wrap">
+      <h2 class="rv">¿Qué cuenta «Anda, jaleo»?</h2>
+      <div class="grid">
+        <div class="prose rv" style="--dl:.05s">
+          <p>Os confieso una cosa, ahora que nadie nos oye: <strong>yo no la inventé</strong>. «Anda, jaleo» ya se cantaba por España desde mucho antes. Yo la recogí, la armonicé y, en 1931, la grabé al piano con la gran Encarnación López, <strong>La Argentinita</strong>, que además de cantar acompañó la pieza con zapateados y castañuelas. Mi trabajo fue cuidar lo que el pueblo ya había hecho bonito.</p>
+          <p>Si me preguntáis de qué habla, os diría que es una cosa de <strong>amor y de ausencia</strong>: alguien que busca con la mirada a quien quiere y se queda con los ojos llenos de agua, mientras a su alrededor sigue la fiesta. Y esa es su gracia: <strong>la pena y la alegría bailan juntas</strong>, de la mano, como pasa tantas veces en el flamenco.</p>
+          <p>Y luego está la palabrita: «jaleo». Tiene dos caras. Es el <strong>alboroto</strong>, el lío de una fiesta o de una pelea, y es también el <strong>ánimo</strong> que damos a quien canta o baila con palmas y voces. La canción juega con las dos.</p>
+        </div>
+        <div class="rv" style="--dl:.12s">
+          <div class="frase">
+            <small>La canción en una frase</small>
+            <p>Una pena de amor <b>cantada con ritmo de fiesta</b>.</p>
+          </div>
+          <div class="dos">
+            <div><b>Jaleo</b>alboroto, lío, fiesta.</div>
+            <div><b>Jalear</b>animar a quien baila con palmas y gritos de «¡olé!».</div>
+          </div>
+          <div class="dos" style="grid-template-columns:minmax(0,1fr)">
+            <div><b>Escúchala</b>Probad la de La Argentinita (1931) y las versiones de Carmen Linares, Enrique Morente o Niña Pastori. ¡Cada una suena distinta!</div>
+          </div>
+        </div>
+      </div>
+      <figure class="aus rv">
+        <svg viewBox="0 0 800 412" role="img" aria-label="Dibujo: una fiesta flamenca con bailaora, bailaor y guitarra bajo luces y arcos de lunares, y a un lado, alguien sentado a solas junto a una silla vacía con un clavel encima.">
+<defs><linearGradient id="nch" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14122b"/><stop offset="1" stop-color="#2b2757"/></linearGradient>
+<linearGradient id="som" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#14122b" stop-opacity="0"/><stop offset="1" stop-color="#14122b" stop-opacity=".55"/></linearGradient></defs>
+<rect width="800" height="430" fill="url(#nch)"/>
+<path d="M30 340V150C30 86 70 50 135 50S240 86 240 150V340Z" fill="#e8742c"/><clipPath id="c1"><path d="M30 340V150C30 86 70 50 135 50S240 86 240 150V340Z"/></clipPath><g clip-path="url(#c1)" fill="#fff" opacity=".92"><circle cx="44" cy="80" r="7" fill="#fff"/><circle cx="88" cy="80" r="7" fill="#fff"/><circle cx="132" cy="80" r="7" fill="#fff"/><circle cx="176" cy="80" r="7" fill="#fff"/><circle cx="220" cy="80" r="7" fill="#fff"/><circle cx="66" cy="120" r="7" fill="#fff"/><circle cx="110" cy="120" r="7" fill="#fff"/><circle cx="154" cy="120" r="7" fill="#fff"/><circle cx="198" cy="120" r="7" fill="#fff"/><circle cx="44" cy="159" r="7" fill="#fff"/><circle cx="88" cy="159" r="7" fill="#fff"/><circle cx="132" cy="159" r="7" fill="#fff"/><circle cx="176" cy="159" r="7" fill="#fff"/><circle cx="220" cy="159" r="7" fill="#fff"/><circle cx="66" cy="199" r="7" fill="#fff"/><circle cx="110" cy="199" r="7" fill="#fff"/><circle cx="154" cy="199" r="7" fill="#fff"/><circle cx="198" cy="199" r="7" fill="#fff"/><circle cx="44" cy="238" r="7" fill="#fff"/><circle cx="88" cy="238" r="7" fill="#fff"/><circle cx="132" cy="238" r="7" fill="#fff"/><circle cx="176" cy="238" r="7" fill="#fff"/><circle cx="220" cy="238" r="7" fill="#fff"/><circle cx="66" cy="278" r="7" fill="#fff"/><circle cx="110" cy="278" r="7" fill="#fff"/><circle cx="154" cy="278" r="7" fill="#fff"/><circle cx="198" cy="278" r="7" fill="#fff"/><circle cx="44" cy="318" r="7" fill="#fff"/><circle cx="88" cy="318" r="7" fill="#fff"/><circle cx="132" cy="318" r="7" fill="#fff"/><circle cx="176" cy="318" r="7" fill="#fff"/><circle cx="220" cy="318" r="7" fill="#fff"/></g><path d="M268 340V150C268 86 308 50 373 50S478 86 478 150V340Z" fill="#e8742c"/><clipPath id="c2"><path d="M268 340V150C268 86 308 50 373 50S478 86 478 150V340Z"/></clipPath><g clip-path="url(#c2)"><circle cx="282" cy="80" r="7" fill="#fff"/><circle cx="326" cy="80" r="7" fill="#fff"/><circle cx="370" cy="80" r="7" fill="#fff"/><circle cx="414" cy="80" r="7" fill="#fff"/><circle cx="458" cy="80" r="7" fill="#fff"/><circle cx="304" cy="120" r="7" fill="#fff"/><circle cx="348" cy="120" r="7" fill="#fff"/><circle cx="392" cy="120" r="7" fill="#fff"/><circle cx="436" cy="120" r="7" fill="#fff"/><circle cx="282" cy="159" r="7" fill="#fff"/><circle cx="326" cy="159" r="7" fill="#fff"/><circle cx="370" cy="159" r="7" fill="#fff"/><circle cx="414" cy="159" r="7" fill="#fff"/><circle cx="458" cy="159" r="7" fill="#fff"/><circle cx="304" cy="199" r="7" fill="#fff"/><circle cx="348" cy="199" r="7" fill="#fff"/><circle cx="392" cy="199" r="7" fill="#fff"/><circle cx="436" cy="199" r="7" fill="#fff"/><circle cx="282" cy="238" r="7" fill="#fff"/><circle cx="326" cy="238" r="7" fill="#fff"/><circle cx="370" cy="238" r="7" fill="#fff"/><circle cx="414" cy="238" r="7" fill="#fff"/><circle cx="458" cy="238" r="7" fill="#fff"/><circle cx="304" cy="278" r="7" fill="#fff"/><circle cx="348" cy="278" r="7" fill="#fff"/><circle cx="392" cy="278" r="7" fill="#fff"/><circle cx="436" cy="278" r="7" fill="#fff"/><circle cx="282" cy="318" r="7" fill="#fff"/><circle cx="326" cy="318" r="7" fill="#fff"/><circle cx="370" cy="318" r="7" fill="#fff"/><circle cx="414" cy="318" r="7" fill="#fff"/><circle cx="458" cy="318" r="7" fill="#fff"/></g><path d="M520 420V190C520 128 560 96 625 96S730 128 730 190V420Z" fill="#3a3670"/><clipPath id="c3"><path d="M520 420V190C520 128 560 96 625 96S730 128 730 190V420Z"/></clipPath><g clip-path="url(#c3)"><circle cx="534" cy="126" r="5" fill="#93c0e3"/><circle cx="578" cy="126" r="5" fill="#93c0e3"/><circle cx="622" cy="126" r="5" fill="#93c0e3"/><circle cx="666" cy="126" r="5" fill="#93c0e3"/><circle cx="710" cy="126" r="5" fill="#93c0e3"/><circle cx="556" cy="166" r="5" fill="#93c0e3"/><circle cx="600" cy="166" r="5" fill="#93c0e3"/><circle cx="644" cy="166" r="5" fill="#93c0e3"/><circle cx="688" cy="166" r="5" fill="#93c0e3"/><circle cx="534" cy="205" r="5" fill="#93c0e3"/><circle cx="578" cy="205" r="5" fill="#93c0e3"/><circle cx="622" cy="205" r="5" fill="#93c0e3"/><circle cx="666" cy="205" r="5" fill="#93c0e3"/><circle cx="710" cy="205" r="5" fill="#93c0e3"/><circle cx="556" cy="245" r="5" fill="#93c0e3"/><circle cx="600" cy="245" r="5" fill="#93c0e3"/><circle cx="644" cy="245" r="5" fill="#93c0e3"/><circle cx="688" cy="245" r="5" fill="#93c0e3"/><circle cx="534" cy="284" r="5" fill="#93c0e3"/><circle cx="578" cy="284" r="5" fill="#93c0e3"/><circle cx="622" cy="284" r="5" fill="#93c0e3"/><circle cx="666" cy="284" r="5" fill="#93c0e3"/><circle cx="710" cy="284" r="5" fill="#93c0e3"/><circle cx="556" cy="324" r="5" fill="#93c0e3"/><circle cx="600" cy="324" r="5" fill="#93c0e3"/><circle cx="644" cy="324" r="5" fill="#93c0e3"/><circle cx="688" cy="324" r="5" fill="#93c0e3"/><circle cx="534" cy="364" r="5" fill="#93c0e3"/><circle cx="578" cy="364" r="5" fill="#93c0e3"/><circle cx="622" cy="364" r="5" fill="#93c0e3"/><circle cx="666" cy="364" r="5" fill="#93c0e3"/><circle cx="710" cy="364" r="5" fill="#93c0e3"/><circle cx="556" cy="403" r="5" fill="#93c0e3"/><circle cx="600" cy="403" r="5" fill="#93c0e3"/><circle cx="644" cy="403" r="5" fill="#93c0e3"/><circle cx="688" cy="403" r="5" fill="#93c0e3"/></g>
+<rect x="0" y="336" width="800" height="94" fill="#14122b"/><rect x="0" y="336" width="800" height="3" fill="#f2b84b" opacity=".35"/>
+<g><rect x="266" y="196" width="8" height="64" rx="3" fill="#5a2f26"/><rect x="263" y="184" width="14" height="16" rx="3" fill="#5a2f26"/>
+<path d="M270 262C246 254 240 280 254 292C238 304 244 334 270 334C296 334 302 304 286 292C300 280 294 254 270 262Z" fill="#a85d3f"/><circle cx="270" cy="296" r="7" fill="#2a1410"/><path d="M270 200V300" stroke="#f2d9b0" stroke-width=".8"/></g><g class="sw" style="transform-origin:140px 336px">
+  <path d="M126 226C110 262 80 300 74 328Q88 346 102 334Q116 348 130 334Q140 346 150 334Q164 348 178 334Q192 346 206 328C200 300 170 262 154 226Z" fill="#d93a47"/>
+  <path d="M88 296Q114 310 140 298T192 296" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2"/>
+  <g clip-path="none"><circle cx="117" cy="295" r="3.2" fill="#fff"/><circle cx="129" cy="298" r="3.2" fill="#fff"/><circle cx="151" cy="266" r="3.2" fill="#fff"/><circle cx="97" cy="312" r="3.2" fill="#fff"/><circle cx="119" cy="276" r="3.2" fill="#fff"/><circle cx="184" cy="290" r="3.2" fill="#fff"/><circle cx="170" cy="291" r="3.2" fill="#fff"/><circle cx="152" cy="271" r="3.2" fill="#fff"/><circle cx="152" cy="314" r="3.2" fill="#fff"/><circle cx="142" cy="306" r="3.2" fill="#fff"/><circle cx="155" cy="266" r="3.2" fill="#fff"/><circle cx="163" cy="297" r="3.2" fill="#fff"/><circle cx="123" cy="264" r="3.2" fill="#fff"/><circle cx="172" cy="290" r="3.2" fill="#fff"/><circle cx="159" cy="315" r="3.2" fill="#fff"/><circle cx="159" cy="317" r="3.2" fill="#fff"/><circle cx="131" cy="310" r="3.2" fill="#fff"/><circle cx="135" cy="318" r="3.2" fill="#fff"/><circle cx="173" cy="268" r="3.2" fill="#fff"/><circle cx="108" cy="275" r="3.2" fill="#fff"/><circle cx="181" cy="288" r="3.2" fill="#fff"/><circle cx="151" cy="280" r="3.2" fill="#fff"/></g>
+  <path d="M127 226V192C127 184 132 180 140 180S153 184 153 192V226Z" fill="#b52a37"/>
+  <path d="M130 186C114 200 106 214 116 228" stroke="#e9c6a4" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M149 186C162 170 170 156 174 140" stroke="#e9c6a4" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <g transform="translate(174 140) rotate(18)"><path d="M0 0L-28 -30A40 40 0 0 1 28 -30Z" fill="#14122b" stroke="#f2b84b" stroke-width="1.6" stroke-linejoin="round"/><path d="M0 0L-14 -38M0 0L0 -40M0 0L14 -38" stroke="#f2b84b" stroke-width="1.2"/></g>
+  <circle cx="140" cy="168" r="11" fill="#e9c6a4"/>
+  <path d="M128 166C126 150 150 148 152 164C146 158 136 158 128 166Z" fill="#14122b"/><circle cx="142" cy="152" r="6" fill="#14122b"/>
+  <circle cx="131" cy="160" r="6" fill="#d93a47"/><circle cx="131" cy="160" r="2.4" fill="#ee5b66"/>
+</g><g class="sw2" style="transform-origin:395px 336px">
+  <path d="M389 246L379 330M401 246L411 330" stroke="#14122b" stroke-width="11" stroke-linecap="round"/>
+  <path d="M371 334h14M405 334h14" stroke="#0e0c24" stroke-width="6" stroke-linecap="round"/>
+  <path d="M380 192Q395 184 410 192L408 244H382Z" fill="#f3efe9"/>
+  <path d="M381 232H409V246H381Z" fill="#d93a47"/><path d="M405 240l8 14l-5 -1" fill="#d93a47"/>
+  <path d="M406 194C421 178 425 160 427 140" stroke="#f3efe9" stroke-width="7" fill="none" stroke-linecap="round"/><circle cx="427" cy="136" r="4.6" fill="#e9c6a4"/>
+  <path d="M384 196C371 212 381 230 389 234" stroke="#f3efe9" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <circle cx="395" cy="176" r="10" fill="#e9c6a4"/>
+  <ellipse cx="395" cy="169" rx="21" ry="4.4" fill="#14122b"/><path d="M385 169C385 154 405 154 405 169Z" fill="#14122b"/>
+</g><g class="nt" style="--t:0.0s;--x:10px"><circle cx="300" cy="230" r="4.2" fill="#fff1c9"/><path d="M304 230V214q7 2 7 9" stroke="#fff1c9" stroke-width="1.8" fill="none"/></g><g class="nt" style="--t:1.3s;--x:-8px"><circle cx="318" cy="214" r="4.2" fill="#fff1c9"/><path d="M322 214V198q7 2 7 9" stroke="#fff1c9" stroke-width="1.8" fill="none"/></g><g class="nt" style="--t:2.6s;--x:12px"><circle cx="334" cy="236" r="4.2" fill="#fff1c9"/><path d="M338 236V220q7 2 7 9" stroke="#fff1c9" stroke-width="1.8" fill="none"/></g>
+<rect x="420" y="0" width="380" height="430" fill="url(#som)"/>
+<path d="M-10 22Q200 100 400 54Q600 100 810 22" fill="none" stroke="#0e0c24" stroke-width="1.6"/><g class="bl" style="--t:0.6s"><circle cx="32" cy="43" r="13" fill="#f2b84b" opacity=".18"/><circle cx="32" cy="43" r="5" fill="#f2b84b"/></g><g class="bl" style="--t:1.2s"><circle cx="74" cy="55" r="13" fill="#ee5b66" opacity=".18"/><circle cx="74" cy="55" r="5" fill="#ee5b66"/></g><g class="bl" style="--t:1.8s"><circle cx="115" cy="65" r="13" fill="#fff1c9" opacity=".18"/><circle cx="115" cy="65" r="5" fill="#fff1c9"/></g><g class="bl" style="--t:2.4s"><circle cx="156" cy="72" r="13" fill="#f2b84b" opacity=".18"/><circle cx="156" cy="72" r="5" fill="#f2b84b"/></g><g class="bl" style="--t:0.0s"><circle cx="198" cy="76" r="13" fill="#f2b84b" opacity=".18"/><circle cx="198" cy="76" r="5" fill="#f2b84b"/></g><g class="bl" style="--t:0.6s"><circle cx="238" cy="78" r="13" fill="#ee5b66" opacity=".18"/><circle cx="238" cy="78" r="5" fill="#ee5b66"/></g><g class="bl" style="--t:1.2s"><circle cx="279" cy="77" r="13" fill="#fff1c9" opacity=".18"/><circle cx="279" cy="77" r="5" fill="#fff1c9"/></g><g class="bl" style="--t:1.8s"><circle cx="320" cy="74" r="13" fill="#f2b84b" opacity=".18"/><circle cx="320" cy="74" r="5" fill="#f2b84b"/></g><g class="bl" style="--t:2.4s"><circle cx="360" cy="69" r="13" fill="#f2b84b" opacity=".18"/><circle cx="360" cy="69" r="5" fill="#f2b84b"/></g><g class="bl" style="--t:0.0s"><circle cx="440" cy="69" r="13" fill="#ee5b66" opacity=".18"/><circle cx="440" cy="69" r="5" fill="#ee5b66"/></g><g class="bl" style="--t:0.6s"><circle cx="480" cy="74" r="13" fill="#fff1c9" opacity=".18"/><circle cx="480" cy="74" r="5" fill="#fff1c9"/></g><g class="bl" style="--t:1.2s"><circle cx="521" cy="77" r="13" fill="#f2b84b" opacity=".18"/><circle cx="521" cy="77" r="5" fill="#f2b84b"/></g><g class="bl" style="--t:1.8s"><circle cx="562" cy="78" r="13" fill="#f2b84b" opacity=".18"/><circle cx="562" cy="78" r="5" fill="#f2b84b"/></g><g class="bl" style="--t:2.4s"><circle cx="602" cy="76" r="13" fill="#ee5b66" opacity=".18"/><circle cx="602" cy="76" r="5" fill="#ee5b66"/></g><g class="bl" style="--t:0.0s"><circle cx="644" cy="72" r="13" fill="#fff1c9" opacity=".18"/><circle cx="644" cy="72" r="5" fill="#fff1c9"/></g><g class="bl" style="--t:0.6s"><circle cx="685" cy="65" r="13" fill="#f2b84b" opacity=".18"/><circle cx="685" cy="65" r="5" fill="#f2b84b"/></g><g class="bl" style="--t:1.2s"><circle cx="726" cy="55" r="13" fill="#f2b84b" opacity=".18"/><circle cx="726" cy="55" r="5" fill="#f2b84b"/></g><g class="bl" style="--t:1.8s"><circle cx="768" cy="43" r="13" fill="#ee5b66" opacity=".18"/><circle cx="768" cy="43" r="5" fill="#ee5b66"/></g>
+<g>
+ <path d="M594 262V345" stroke="#d93a47" stroke-width="10" stroke-linecap="round"/>
+ <rect x="588" y="340" width="68" height="10" rx="3" fill="#d93a47"/>
+ <path d="M594 392V350M650 392V350" stroke="#7a463d" stroke-width="7" stroke-linecap="round"/>
+ <g fill="#fff"><circle cx="594" cy="285" r="2.3"/><circle cx="594" cy="305" r="2.3"/><circle cx="594" cy="325" r="2.3"/><circle cx="610" cy="345" r="2.2"/><circle cx="632" cy="345" r="2.2"/></g>
+ <path d="M603 340C600 300 604 276 618 270C634 268 640 288 638 340Z" fill="#0e0c24"/>
+ <path d="M612 342H652L652 392" stroke="#0e0c24" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M646 396h16" stroke="#0e0c24" stroke-width="7" stroke-linecap="round"/>
+ <path d="M606 280L630 284" stroke="#d93a47" stroke-width="5" stroke-linecap="round"/>
+ <circle cx="622" cy="256" r="11" fill="#e9c6a4"/>
+ <ellipse cx="622" cy="249" rx="22" ry="4.6" fill="#0e0c24"/><path d="M612 249C612 234 632 234 632 249Z" fill="#0e0c24"/>
+ <path d="M632 286C650 296 662 312 672 326" stroke="#0e0c24" stroke-width="8" fill="none" stroke-linecap="round"/><circle cx="676" cy="330" r="5" fill="#e9c6a4"/>
+</g>
+<g>
+ <path d="M752 262V345" stroke="#d93a47" stroke-width="10" stroke-linecap="round"/>
+ <rect x="690" y="340" width="68" height="10" rx="3" fill="#d93a47"/>
+ <path d="M752 392V350M696 392V350" stroke="#7a463d" stroke-width="7" stroke-linecap="round"/>
+ <g fill="#fff"><circle cx="752" cy="285" r="2.3"/><circle cx="752" cy="305" r="2.3"/><circle cx="752" cy="325" r="2.3"/><circle cx="706" cy="345" r="2.2"/><circle cx="728" cy="345" r="2.2"/></g>
+ <path d="M750 270C760 290 764 320 758 352L742 352C744 320 742 296 746 270Z" fill="#0e0c24"/>
+ <path d="M744 330v22M749 330v22M754 330v22M758 330v22" stroke="#0e0c24" stroke-width="1.6"/>
+ <g class="pet"><circle cx="716" cy="336" r="7" fill="#d93a47"/><circle cx="713" cy="334" r="4.4" fill="#ee5b66"/><circle cx="719" cy="338" r="3" fill="#b52a37"/></g>
+</g>
+</svg>
+        <figcaption>La fiesta sigue y la música no para… pero hay una silla vacía.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+
+
+  <div class="tira r" aria-hidden="true"></div>
+
+  <!-- ===== EL JALEO EN EL FLAMENCO ===== -->
+  <section>
+    <div class="wrap">
+      <h2 class="rv">El jaleo y el flamenco, de la mano</h2>
+      <ul class="cards">
+        <li class="rv"><svg class="ib" aria-hidden="true"><use href="#castanuelas"/></svg><div><h3>Un palo antiguo</h3><p>En el siglo XIX los «jaleos» eran un palo flamenco muy popular en teatros y cafés cantantes: un baile y un cante ligeros, de ritmo vivo y compás ternario.</p></div></li>
+        <li class="rv" style="--dl:.08s"><svg class="ib" aria-hidden="true"><use href="#tacon"/></svg><div><h3>Abuelo de las bulerías</h3><p>Se considera un germen de la soleá y, sobre todo, de las bulerías. Por eso hoy tantos artistas flamencos cantan «Anda, jaleo» por bulerías.</p></div></li>
+        <li class="rv"><svg class="ib" aria-hidden="true"><use href="#megafono"/></svg><div><h3>¿Y qué es jalear?</h3><p>Es animar a quien está bailando o cantando para que se crezca. Como cuando le gritas «¡venga, tú puedes!» a un amigo en una carrera, pero con palmas, pies y voces: «¡olé!», «¡eso es!». Quien jalea no mira sin más: ¡participa en la fiesta!</p></div></li>
+        <li class="rv" style="--dl:.08s"><svg class="ib" aria-hidden="true"><use href="#libro"/></svg><div><h3>Del libro al escenario</h3><p>Yo adoraba el cante jondo: en 1922 organicé en Granada, con mi amigo Manuel de Falla, el Concurso de Cante Jondo. Quise que lo popular se mirara con el respeto que merece.</p></div></li>
+      </ul>
+      <p class="prose rv" style="margin-top:2rem"><span class="aside">Y no soy el único que lo piensa: el 16 de noviembre de 2010, la UNESCO declaró el flamenco Patrimonio Cultural Inmaterial de la Humanidad. Por eso cada 16 de noviembre celebramos su día.</span></p>
+    </div>
+  </section>
+
+  <!-- ===== GLOSARIO ===== -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <h2 class="rv">Jalead vosotros también</h2>
+      <p class="rv" style="margin-top:1.2rem;max-width:56ch;color:var(--mut)">En un tablao, el público no se queda callado. Estas son algunas de las palabras con las que se anima a quien actúa.</p>
+      <ul class="jal">
+        <li class="rv"><b>¡Olé!</b><span>El grito más famoso: «¡así se hace!».</span></li>
+        <li class="rv" style="--dl:.06s"><b>¡Arsa!</b><span>Una voz para dar ánimo y empuje.</span></li>
+        <li class="rv" style="--dl:.12s"><b>¡Agua!</b><span>Otra exclamación de ánimo que se oye en los tablaos.</span></li>
+        <li class="rv" style="--dl:.18s"><b>Palmas</b><span>El ritmo que pone todo el público, a compás.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== GALERÍA ===== -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <h2 class="rv">Así lo vivimos</h2>
+      <div class="gal">
+        <figure class="ph a rv">
+          <button type="button" data-lb aria-label="Ampliar foto: el profesorado vestido de flamenco">
+            <img src="img/profes.jpg" width="1600" height="1200" alt="El profesorado reunido en el rincón flamenco, con mantones, flores, sombreros y una guitarra de cartón." loading="lazy" decoding="async">
+          </button>
+          <figcaption>Los seños y los profes también se vistieron de fiesta.</figcaption>
+        </figure>
+        <figure class="ph b rv" style="--dl:.1s">
+          <button type="button" data-lb aria-label="Ampliar foto: detalle de la silla con lunares">
+            <img src="img/silla.jpg" width="1200" height="1600" alt="Detalle de una silla roja con lunares blancos y de unos flecos negros de mantón." loading="lazy" decoding="async">
+          </button>
+          <figcaption>Silla de lunares y flecos de seda: puro detalle.</figcaption>
+        </figure>
+        <figure class="ph c rv">
+          <button type="button" data-lb aria-label="Ampliar foto: el director leyendo con su libro">
+            <img src="img/director.jpg" width="1200" height="1600" alt="Un hombre con traje negro y pajarita, con un clavel rojo en la solapa, leyendo un libro delante del alumnado." loading="lazy" decoding="async">
+          </button>
+          <figcaption>Federico, con su libro, leyendo despacito.</figcaption>
+        </figure>
+        <figure class="ph d rv" style="--dl:.1s">
+          <button type="button" data-lb aria-label="Ampliar foto: el elenco al completo junto al cartel">
+            <img src="img/grupo.jpg" width="1600" height="1200" alt="Alumnos con guitarra de cartón, mantones, sombreros y abanico, posando alrededor de una mesa con mantón bordado." loading="lazy" decoding="async">
+          </button>
+          <figcaption>El elenco al completo, junto al cartel.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOLA BLANCA ===== -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="bola rv">
+        <div>
+          <h2>¡Aquí, bola blanca!</h2>
+          <p>Una confidencia, ya que estamos en confianza. Cuentan que en los casinos y ateneos de antes, cuando alguien quería entrar, los socios votaban con bolas: la <strong>bola blanca</strong> decía «sí, adelante» y la <strong>bola negra</strong>, «no».</p>
+          <p>Y yo, queridos míos, os confieso que <strong>muchas veces me han dado bola negra</strong>. ¡Con lo bonitas que eran mis poesías, no me lo explico! Menos mal que en este cole hay <strong>bola blanca para todos</strong>. ¡Sin duda!</p>
+        </div>
+        <svg viewBox="0 0 440 280" role="img" aria-label="Dibujo de muchas bolas blancas apiladas junto a una cajita de votación y, apartadas en un rincón, dos bolas negras.">
+<defs><radialGradient id="bw" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff"/><stop offset=".7" stop-color="#eef3fa"/><stop offset="1" stop-color="#cdd9ea"/></radialGradient>
+<radialGradient id="bn" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#5a5880"/><stop offset=".35" stop-color="#1d1a3c"/><stop offset="1" stop-color="#0b0a1c"/></radialGradient></defs>
+<ellipse cx="180" cy="258" rx="170" ry="12" fill="#000" opacity=".18"/>
+<circle cx="94" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="124" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="154" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="184" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="214" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="244" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="274" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="108" cy="208" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="138" cy="208" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="168" cy="208" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="198" cy="208" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="228" cy="208" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="258" cy="208" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="122" cy="180" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="152" cy="180" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="182" cy="180" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="212" cy="180" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="242" cy="180" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="136" cy="152" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="166" cy="152" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="196" cy="152" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="226" cy="152" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/>
+<g class="rueda" transform="translate(14 0)"><rect x="296" y="168" width="108" height="86" rx="8" fill="#7a463d"/><rect x="296" y="168" width="108" height="16" rx="6" fill="#8f5649"/><rect x="332" y="174" width="36" height="5" rx="2.5" fill="#1d1a3c"/><path d="M308 196h84M308 214h84M308 232h84" stroke="#5a2f26" stroke-width="1.4"/><circle cx="350" cy="150" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><path d="M350 168v8" stroke="#fff" stroke-width="2" stroke-dasharray="2 3"/></g>
+<circle cx="30" cy="246" r="15" fill="url(#bn)" stroke="#93c0e3" stroke-opacity=".7" stroke-width="1.2"/><circle cx="62" cy="252" r="12" fill="url(#bn)" stroke="#93c0e3" stroke-opacity=".7" stroke-width="1.2"/>
+<g fill="#fff" opacity=".9"><path d="M18 238l5 -1 2 5-4 3z" opacity="0"/></g>
+</svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CIERRE ===== -->
+  <div class="thanks lunares" style="margin-top:0">
+    <div class="wrap">
+      <h2 class="rv">Gracias, profes y seños</h2>
+      <p class="rv">Se me acaba el papel, pero no la emoción. Gracias a profes y seños, que decorasteis todo tan bonito para mi llegada. Gracias a las seños, que ensayasteis tantas veces para sorprenderme, y vaya si lo conseguisteis: pusisteis las castañuelas y el corazón. Y gracias a los de Primaria, que bailaron una coreografía preciosa, tocaron la flauta y jalearon como si llevaran toda la vida en un tablao. Familias, os lo cuento yo para que os lo perdáis menos. Hasta el próximo jaleo, ¡olé!</p>
+      <p class="firma rv">Federico</p>
+      <div class="tags rv"><span>#DíaDelFlamenco</span><span>#AndaJaleo</span><span>#FedericoGarcíaLorca</span></div>
+      <p class="sign rv">CEIP Nuestra Señora de la Asunción · Arboleas</p>
+    </div>
+  </div>
+</main>
+
+<!-- Visor de fotos -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+  <button type="button" id="lb-x" aria-label="Cerrar">×</button>
+  <img id="lb-i" alt="">
+  <p id="lb-c"></p>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var rv=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    rv.forEach(function(n){io.observe(n)});
+  }else rv.forEach(function(n){n.classList.add('in')});
+
+  var lb=document.getElementById('lb'),im=document.getElementById('lb-i'),cp=document.getElementById('lb-c'),last=null;
+  function open(b){var f=b.closest('figure'),i=b.querySelector('img');last=b;im.src=i.currentSrc||i.src;im.alt=i.alt;cp.textContent=f.querySelector('figcaption')?f.querySelector('figcaption').textContent:'';lb.hidden=false;lb.classList.add('on');document.getElementById('lb-x').focus()}
+  function close(){lb.classList.remove('on');lb.hidden=true;im.removeAttribute('src');if(last)last.focus()}
+  [].forEach.call(document.querySelectorAll('[data-lb]'),function(b){b.addEventListener('click',function(){open(b)})});
+  lb.addEventListener('click',function(e){if(e.target!==im)close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('on'))close()});
+})();
+
+
+(function(){
+  var a=document.getElementById('musica');
+  if(!a)return;
+  a.volume=.6;
+  var ev=['pointerdown','touchstart','keydown'],on=false;
+  function quitar(){ev.forEach(function(t){document.removeEventListener(t,go)})}
+  function go(){var p=a.play();if(p&&p.then){p.then(function(){on=true;quitar()}).catch(function(){})}else{quitar()}}
+  var p0=a.play();
+  if(p0&&p0.then){p0.then(function(){on=true;quitar()}).catch(function(){})}
+  ev.forEach(function(t){document.addEventListener(t,go,{passive:true})});
+})();
+</script>
+</body>
+</html>
