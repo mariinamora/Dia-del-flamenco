@@ -679,7 +679,7 @@ h2::after{content:"";display:block;width:64px;height:5px;border-radius:5px;margi
   var a=document.getElementById('musica');
   if(!a)return;
   a.volume=.6;
-  var ev=['pointerdown','touchstart','keydown'],on=false;
+  var ev=['pointerdown','pointerup','touchend','click','keydown'],on=false;
   function quitar(){ev.forEach(function(t){document.removeEventListener(t,go)})}
   function go(){var p=a.play();if(p&&p.then){p.then(function(){on=true;quitar()}).catch(function(){})}else{quitar()}}
   var p0=a.play();
