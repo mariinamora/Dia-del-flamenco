@@ -130,7 +130,7 @@ h2::after{content:"";display:block;width:64px;height:5px;border-radius:5px;margi
 .gal{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:clamp(240px,36vw,400px);gap:clamp(.7rem,2vw,1.2rem);margin-top:clamp(1.6rem,4vw,2.6rem)}
 .gal .ph{height:100%}
 .gal .a{grid-column:span 7}.gal .b{grid-column:span 5}
-.gal .c{grid-column:span 5}.gal .d{grid-column:span 7}
+.gal .c{grid-column:span 12}
 .gal .b img{object-position:50% 40%}.gal .c img{object-position:50% 30%}
 
 /* ===== Cierre ===== */
@@ -169,7 +169,7 @@ h2::after{content:"";display:block;width:64px;height:5px;border-radius:5px;margi
   .lead .ph{aspect-ratio:4/3}
   .gal{grid-auto-rows:auto}
   .gal .ph{height:auto;aspect-ratio:4/3}
-  .gal .a,.gal .b,.gal .c,.gal .d{grid-column:span 12}
+  .gal .a,.gal .b,.gal .c{grid-column:span 12}
   h1{max-width:none}
   .d2,.d3,.d4,.d5{display:none}
   .d1{top:3%;right:-12px;width:96px;opacity:.3}
@@ -188,9 +188,9 @@ h2::after{content:"";display:block;width:64px;height:5px;border-radius:5px;margi
 @keyframes cae{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(8deg)}}
 .infa{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(.7rem,2vw,1.2rem);margin-top:clamp(1.6rem,4vw,2.6rem)}
 .infa .ph{height:clamp(260px,38vw,440px)}
-.infa .a{grid-column:span 7}.infa .b{grid-column:span 5}.infa .c{grid-column:span 5}
-.infa .b img{object-position:50% 35%}
-.voc{grid-column:span 7;display:flex;flex-direction:column;justify-content:center;gap:1rem;padding:clamp(1.2rem,3vw,2rem);border-radius:var(--r);background:var(--sky);border:2px solid #fff}
+.infa .a{grid-column:span 7}.infa .b{grid-column:span 5}.infa .c,.infa .g{grid-column:span 4}
+.infa .b img{object-position:50% 35%}.infa .g img{object-position:50% 40%}
+.voc{grid-column:span 4;display:flex;flex-direction:column;justify-content:center;gap:1rem;padding:clamp(1.2rem,3vw,2rem);border-radius:var(--r);background:var(--sky);border:2px solid #fff}
 .voc h3{font:600 1.35rem/1.2 var(--serif);color:var(--navy)}
 .vocab{display:flex;flex-wrap:wrap;gap:.5rem}
 .vocab li{padding:.35rem .85rem;border-radius:.8rem;background:#fff;border:3px dotted var(--red);font-weight:700;font-size:.92rem;color:var(--navy)}
@@ -198,7 +198,7 @@ h2::after{content:"";display:block;width:64px;height:5px;border-radius:5px;margi
 .bola h2{color:#fff}.bola h2::after{background:var(--red)}
 .bola p{margin-top:1rem;color:#dbe9f5}.bola p strong{color:#fff}
 .bola svg{display:block;width:100%;height:auto;max-width:460px;margin-inline:auto}
-@media(max-width:700px){.infa{grid-template-columns:minmax(0,1fr)}.infa .ph{height:auto;aspect-ratio:4/3}.infa .a,.infa .b,.infa .c,.voc{grid-column:auto}.infa .b{aspect-ratio:4/5}}
+@media(max-width:700px){.infa{grid-template-columns:minmax(0,1fr)}.infa .ph{height:auto;aspect-ratio:4/3}.infa .a,.infa .b,.infa .c,.infa .g,.voc{grid-column:auto}.infa .b{aspect-ratio:4/5}}
 @media(max-width:820px){.bola{grid-template-columns:minmax(0,1fr)}}
 .jalear{margin-top:1.8rem;display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
 .jal-btn{display:inline-flex;align-items:center;gap:.7rem;padding:.95rem 1.5rem;border:0;border-radius:999px;background:var(--red);color:#fff;font:800 1rem/1.1 var(--sans);cursor:pointer;box-shadow:0 14px 30px -12px rgba(217,58,71,.85);animation:latido 2.2s ease-in-out infinite;transition:transform .2s,background .3s}
@@ -433,6 +433,12 @@ h2::after{content:"";display:block;width:64px;height:5px;border-radius:5px;margi
           </button>
           <figcaption>«Yo soy flamenco»: cada uno con su chapa.</figcaption>
         </figure>
+        <figure class="ph g rv" style="--dl:.05s">
+          <button type="button" data-lb aria-label="Ampliar foto: la clase de 3 años junto al rincón flamenco">
+            <img src="img/infantil.jpg" width="1200" height="1600" alt="Clase de 3 años sentada en el suelo junto a una mesa con mantón, zapatos de baile, abanico, guitarra de cartón y cajón, delante del cartel «Anda, jaleo, jaleo», con una seño vestida de flamenca. Las caras están difuminadas." loading="lazy" decoding="async">
+          </button>
+          <figcaption>La clase de 3 años al completo, con todo lo necesario para armar jaleo.</figcaption>
+        </figure>
         <div class="voc rv" style="--dl:.1s">
           <h3>Lo que han aprendido</h3>
           <ul class="vocab">
@@ -638,12 +644,6 @@ h2::after{content:"";display:block;width:64px;height:5px;border-radius:5px;margi
             <img src="img/director.jpg" width="1200" height="1600" alt="Un hombre con traje negro y pajarita, con un clavel rojo en la solapa, leyendo un libro delante del alumnado." loading="lazy" decoding="async">
           </button>
           <figcaption>Federico, con su libro, leyendo despacito.</figcaption>
-        </figure>
-        <figure class="ph d rv" style="--dl:.1s">
-          <button type="button" data-lb aria-label="Ampliar foto: el elenco al completo junto al cartel">
-            <img src="img/grupo.jpg" width="1600" height="1200" alt="Alumnos con guitarra de cartón, mantones, sombreros y abanico, posando alrededor de una mesa con mantón bordado." loading="lazy" decoding="async">
-          </button>
-          <figcaption>El elenco al completo, junto al cartel.</figcaption>
         </figure>
       </div>
     </div>
