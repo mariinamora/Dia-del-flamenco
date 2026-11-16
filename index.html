@@ -200,6 +200,33 @@ h2::after{content:"";display:block;width:64px;height:5px;border-radius:5px;margi
 .bola svg{display:block;width:100%;height:auto;max-width:460px;margin-inline:auto}
 @media(max-width:700px){.infa{grid-template-columns:minmax(0,1fr)}.infa .ph{height:auto;aspect-ratio:4/3}.infa .a,.infa .b,.infa .c,.voc{grid-column:auto}.infa .b{aspect-ratio:4/5}}
 @media(max-width:820px){.bola{grid-template-columns:minmax(0,1fr)}}
+.jalear{margin-top:1.8rem;display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+.jal-btn{display:inline-flex;align-items:center;gap:.7rem;padding:.95rem 1.5rem;border:0;border-radius:999px;background:var(--red);color:#fff;font:800 1rem/1.1 var(--sans);cursor:pointer;box-shadow:0 14px 30px -12px rgba(217,58,71,.85);animation:latido 2.2s ease-in-out infinite;transition:transform .2s,background .3s}
+.jal-btn svg{width:1.7rem;height:1.7rem;flex:none}
+.jal-btn:hover{background:var(--red2)}.jal-btn:active{transform:scale(.95)}
+.jal-btn:focus-visible,.mut:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.jal-btn.on{animation:none;background:var(--navy3);box-shadow:inset 0 0 0 2px var(--blue)}
+.mut{padding:.7rem 1.1rem;border-radius:999px;border:2px solid var(--blue);background:rgba(255,255,255,.08);color:#fff;font:700 .9rem/1 var(--sans);cursor:pointer}
+.oles{margin-top:.9rem;color:var(--blue);font-weight:700}
+.fx{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:3}
+.fx .it{position:absolute;top:-50px;animation:llueve linear forwards}
+.fx .it svg{display:block;width:100%;height:100%}
+.fx .ole{position:absolute;white-space:nowrap;font:italic 700 clamp(1.5rem,4.5vw,2.6rem)/1 var(--serif);color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.45);animation:ole 1.5s ease-out forwards}
+.baila{animation:baila .7s ease-in-out}
+@keyframes latido{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+@keyframes llueve{to{transform:translateY(var(--h)) rotate(var(--r))}}
+@keyframes ole{0%{opacity:0;transform:translateY(10px) scale(.6)}20%{opacity:1;transform:translateY(0) scale(1.1)}100%{opacity:0;transform:translateY(-56px) scale(1)}}
+@keyframes baila{0%,100%{transform:rotate(0)}25%{transform:rotate(-1.4deg) translateY(-4px)}75%{transform:rotate(1.4deg) translateY(-4px)}}
+.pb{animation:bolabota 2.6s ease-in-out infinite;animation-delay:var(--d)}
+.bolas:hover .pb{animation-duration:.8s}
+.gota{animation:bolacae 3.6s ease-in infinite}
+.caja{transform-box:fill-box;transform-origin:50% 100%;animation:caja 3.6s ease-in infinite}
+.neg{transform-box:fill-box;transform-origin:center;animation:negro 5s ease-in-out infinite;animation-delay:var(--d)}
+.neg.n2{animation-direction:reverse}
+@keyframes bolabota{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes bolacae{0%{transform:translateY(-84px);opacity:0}12%{opacity:1}52%{transform:translateY(0);opacity:1}62%{transform:translateY(26px);opacity:0}100%{transform:translateY(26px);opacity:0}}
+@keyframes caja{0%,56%,72%,100%{transform:scale(1,1)}62%{transform:scale(1.04,.95)}}
+@keyframes negro{0%,100%{transform:translateX(0) rotate(0)}50%{transform:translateX(-9px) rotate(-70deg)}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
 </style>
 </head>
@@ -307,8 +334,14 @@ h2::after{content:"";display:block;width:64px;height:5px;border-radius:5px;margi
     <p class="kick"><i></i>Día del Flamenco · 16 de noviembre de 2026</p>
     <h1>Anda, <em>jaleo</em>: el día que Federico nos visitó</h1>
     <p class="lede">Una carta a las familias, escrita por el poeta que se paseó por nuestro patio con sombrero y pajarita y vio bailar a los chiquillos una coreografía preciosa.</p>
+    <div class="jalear">
+      <button type="button" id="jal" class="jal-btn"><svg aria-hidden="true"><use href="#abanico"/></svg><span id="jal-t">Pulsa aquí para sentir el jaleo</span></button>
+      <button type="button" id="mut" class="mut" aria-pressed="false" hidden>Música: sí</button>
+    </div>
+    <p class="oles" id="oles" hidden></p>
     <audio id="musica" src="audio/anda-jaleo.mp3" loop preload="auto" playsinline></audio>
   </div>
+  <div class="fx" id="fx" aria-hidden="true"></div>
 </header>
 
 <main>
@@ -625,14 +658,13 @@ h2::after{content:"";display:block;width:64px;height:5px;border-radius:5px;margi
           <p>Una confidencia, ya que estamos en confianza. Cuentan que en los casinos y ateneos de antes, cuando alguien quería entrar, los socios votaban con bolas: la <strong>bola blanca</strong> decía «sí, adelante» y la <strong>bola negra</strong>, «no».</p>
           <p>Y yo, queridos míos, os confieso que <strong>muchas veces me han dado bola negra</strong>. ¡Con lo bonitas que eran mis poesías, no me lo explico! Menos mal que en este cole hay <strong>bola blanca para todos</strong>. ¡Sin duda!</p>
         </div>
-        <svg viewBox="0 0 440 280" role="img" aria-label="Dibujo de muchas bolas blancas apiladas junto a una cajita de votación y, apartadas en un rincón, dos bolas negras.">
+        <svg class="bolas" viewBox="0 0 440 280" role="img" aria-label="Dibujo animado: bolas blancas que botan, una cae por la ranura de una cajita de votación y, apartadas en un rincón, dos bolas negras que ruedan solas.">
 <defs><radialGradient id="bw" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff"/><stop offset=".7" stop-color="#eef3fa"/><stop offset="1" stop-color="#cdd9ea"/></radialGradient>
 <radialGradient id="bn" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#5a5880"/><stop offset=".35" stop-color="#1d1a3c"/><stop offset="1" stop-color="#0b0a1c"/></radialGradient></defs>
-<ellipse cx="180" cy="258" rx="170" ry="12" fill="#000" opacity=".18"/>
-<circle cx="94" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="124" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="154" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="184" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="214" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="244" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="274" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="108" cy="208" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="138" cy="208" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="168" cy="208" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="198" cy="208" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="228" cy="208" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="258" cy="208" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="122" cy="180" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="152" cy="180" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="182" cy="180" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="212" cy="180" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="242" cy="180" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="136" cy="152" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="166" cy="152" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="196" cy="152" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><circle cx="226" cy="152" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/>
-<g class="rueda" transform="translate(14 0)"><rect x="296" y="168" width="108" height="86" rx="8" fill="#7a463d"/><rect x="296" y="168" width="108" height="16" rx="6" fill="#8f5649"/><rect x="332" y="174" width="36" height="5" rx="2.5" fill="#1d1a3c"/><path d="M308 196h84M308 214h84M308 232h84" stroke="#5a2f26" stroke-width="1.4"/><circle cx="350" cy="150" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/><path d="M350 168v8" stroke="#fff" stroke-width="2" stroke-dasharray="2 3"/></g>
-<circle cx="30" cy="246" r="15" fill="url(#bn)" stroke="#93c0e3" stroke-opacity=".7" stroke-width="1.2"/><circle cx="62" cy="252" r="12" fill="url(#bn)" stroke="#93c0e3" stroke-opacity=".7" stroke-width="1.2"/>
-<g fill="#fff" opacity=".9"><path d="M18 238l5 -1 2 5-4 3z" opacity="0"/></g>
+<ellipse cx="190" cy="262" rx="180" ry="11" fill="#000" opacity=".18"/>
+<g class="pb" style="--d:1.49s"><circle cx="94" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:1.78s"><circle cx="124" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:1.91s"><circle cx="154" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:2.26s"><circle cx="184" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:1.78s"><circle cx="214" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:2.21s"><circle cx="244" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:0.07s"><circle cx="274" cy="236" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:1.12s"><circle cx="108" cy="208" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:2.26s"><circle cx="138" cy="208" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:1.56s"><circle cx="168" cy="208" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:2.16s"><circle cx="198" cy="208" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:0.27s"><circle cx="228" cy="208" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:1.13s"><circle cx="258" cy="208" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:0.59s"><circle cx="122" cy="180" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:1.31s"><circle cx="152" cy="180" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:1.38s"><circle cx="182" cy="180" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:0.03s"><circle cx="212" cy="180" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:0.52s"><circle cx="242" cy="180" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:0.67s"><circle cx="136" cy="152" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:2.20s"><circle cx="166" cy="152" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:1.84s"><circle cx="196" cy="152" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g><g class="pb" style="--d:0.38s"><circle cx="226" cy="152" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g>
+<g transform="translate(14 0)"><g class="caja"><rect x="296" y="168" width="108" height="86" rx="8" fill="#7a463d"/><rect x="296" y="168" width="108" height="16" rx="6" fill="#8f5649"/><rect x="332" y="174" width="36" height="5" rx="2.5" fill="#1d1a3c"/><path d="M308 196h84M308 214h84M308 232h84" stroke="#5a2f26" stroke-width="1.4"/></g><g class="gota"><circle cx="350" cy="150" r="15" fill="url(#bw)" stroke="#9fb4cf" stroke-width="1"/></g></g>
+<g class="neg n1" style="--d:0s"><circle cx="30" cy="246" r="15" fill="url(#bn)" stroke="#93c0e3" stroke-opacity=".7" stroke-width="1.2"/><circle cx="23.2" cy="239.2" r="3.3" fill="#93c0e3" opacity=".85"/></g><g class="neg n2" style="--d:1.2s"><circle cx="62" cy="252" r="12" fill="url(#bn)" stroke="#93c0e3" stroke-opacity=".7" stroke-width="1.2"/><circle cx="56.6" cy="246.6" r="2.6" fill="#93c0e3" opacity=".85"/></g>
 </svg>
       </div>
     </div>
@@ -676,15 +708,56 @@ h2::after{content:"";display:block;width:64px;height:5px;border-radius:5px;margi
 
 
 (function(){
-  var a=document.getElementById('musica');
-  if(!a)return;
+  var a=document.getElementById('musica'),b=document.getElementById('jal'),m=document.getElementById('mut'),
+      fx=document.getElementById('fx'),hero=document.querySelector('.hero'),cnt=document.getElementById('oles'),
+      bt=document.getElementById('jal-t'),h1=document.querySelector('h1'),
+      n=0,started=false,muted=false,
+      reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,
+      words=['¡Olé!','¡Arsa!','¡Eso es!','¡Toma ya!','¡Ánimo!','¡Así se baila!'],
+      syms=['abanico','castanuelas','rosa','zarcillo','tacon','guitarra'];
+  if(!a||!b)return;
   a.volume=.6;
-  var ev=['pointerdown','pointerup','touchend','click','keydown'],on=false;
-  function quitar(){ev.forEach(function(t){document.removeEventListener(t,go)})}
-  function go(){var p=a.play();if(p&&p.then){p.then(function(){on=true;quitar()}).catch(function(){})}else{quitar()}}
-  var p0=a.play();
-  if(p0&&p0.then){p0.then(function(){on=true;quitar()}).catch(function(){})}
+  function play(){if(muted)return;var p=a.play();if(p&&p.catch)p.catch(function(){})}
+  var ev=['pointerup','touchend','click','keydown'];
+  function go(){play()}
   ev.forEach(function(t){document.addEventListener(t,go,{passive:true})});
+  a.addEventListener('playing',function(){ev.forEach(function(t){document.removeEventListener(t,go)})});
+  function rnd(x,y){return x+Math.random()*(y-x)}
+  function rain(k){
+    if(reduce||!fx)return;
+    var H=hero.clientHeight+90;
+    for(var i=0;i<k;i++){
+      var d=document.createElement('div'),sz=rnd(26,46);
+      d.className='it';
+      d.innerHTML='<svg aria-hidden="true"><use href="#'+syms[Math.floor(Math.random()*syms.length)]+'"/></svg>';
+      d.style.cssText='left:'+rnd(2,96)+'%;width:'+sz+'px;height:'+sz+'px;--h:'+H+'px;--r:'+rnd(-200,200)+'deg;animation-duration:'+rnd(2.6,5)+'s;animation-delay:'+rnd(0,.9)+'s';
+      d.addEventListener('animationend',function(e){e.currentTarget.remove()});
+      fx.appendChild(d);
+    }
+  }
+  function ole(){
+    if(reduce||!fx)return;
+    var hr=hero.getBoundingClientRect(),br=b.getBoundingClientRect(),o=document.createElement('span');
+    o.className='ole';o.textContent=words[Math.floor(Math.random()*words.length)];
+    o.style.left=Math.max(8,Math.min(hero.clientWidth-150,br.left-hr.left+rnd(-10,150)))+'px';
+    o.style.top=Math.max(8,br.top-hr.top-rnd(30,90))+'px';
+    o.addEventListener('animationend',function(){o.remove()});
+    fx.appendChild(o);
+  }
+  b.addEventListener('click',function(){
+    n++;
+    cnt.hidden=false;cnt.textContent='¡Llevamos '+n+(n===1?' olé':' olés')+'!';
+    if(!started){started=true;b.classList.add('on');bt.textContent='¡Olé! Sigue jaleando';m.hidden=false;rain(28)}else{rain(8)}
+    ole();
+    if(!reduce&&h1){h1.classList.remove('baila');void h1.offsetWidth;h1.classList.add('baila')}
+    play();
+  });
+  m.addEventListener('click',function(){
+    muted=!muted;
+    if(muted)a.pause();else play();
+    m.setAttribute('aria-pressed',muted?'true':'false');
+    m.textContent=muted?'Música: no':'Música: sí';
+  });
 })();
 </script>
 </body>
